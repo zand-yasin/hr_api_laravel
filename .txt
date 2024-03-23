@@ -1,0 +1,21 @@
+  INFO  Personal access client created successfully.  
+
+  Client ID ...................................................................................................................................... 1  
+  Client secret ........................................................................................... vaFvOOvY9NUtIpxsS3u7EpJle2gNX3c8xQFXbj9R  
+
+   INFO  Password grant client created successfully.  
+
+  Client ID ...................................................................................................................................... 2  
+  Client secret ........................................................................................... fxRVl7D7wEuuqlDWdd5FwJ0UXeYKIrXyAFfJBE5O  
+
+
+  php artisan passport:client --client
+
+ What should we name the client? [Laravel ClientCredentials Grant Client]:
+ > zand
+
+   INFO  New client created successfully.  
+
+  Client ID ...................................................................................................................................... 3  
+  Client secret ........................................................................................... bw797eZO22eURbGxUZdzyWPfn82RbcKKkx0d6iTX  
+zand@zand:~/Desktop/materials/project/laravel/hr_app$ 
