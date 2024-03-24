@@ -317,6 +317,7 @@ class EmployeeController extends Controller
     // Update operation
     public function updateEmployee(Request $request, $id)
     {
+
         try {
             // column validation
             $fields = $request->validate([
@@ -325,6 +326,7 @@ class EmployeeController extends Controller
                 'manager_id' => 'numeric',
                 'employee_job_id' => 'numeric',
             ]);
+
 
             // Start a database transaction
             DB::beginTransaction();
@@ -335,6 +337,7 @@ class EmployeeController extends Controller
             if (!$employee) {
                 return throw new ModelNotFoundException();
             }
+
 
             // Update employee attributes
             $employee->fill($fields); // Fill with validated fields
@@ -366,11 +369,14 @@ class EmployeeController extends Controller
                 }
             }
 
+
+
             $employee->save();
             // ticking employeeJob to the employee object if exist else null will be tick instead
             $employee->employeeJob = $employeeJob ?? null;
             // ticking manager to the employee object if exist else null will be tick instead 
             $employee->manager = $manager ?? null;
+
 
             $user = $employee->user;
 
@@ -378,8 +384,7 @@ class EmployeeController extends Controller
             // Update user email if provided
             if ($request->has('email')) {
 
-
-                $userexist = User::where('email', $fields['email'])->first();
+                $userexist = User::where('email', $request->input('email'))->first();
 
                 if ($userexist) {
                     $response = [
