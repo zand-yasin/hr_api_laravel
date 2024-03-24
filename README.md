@@ -6,7 +6,7 @@
 4. Type `composer install` to install application dependencies.
 5. Type `php artisan migrate` for database migration incase you didn't upload the database file.
 6. Type `php artisan serve` to run the application.
-7. Login to the system with email: `join.doe@gmail.com` and password: `password`.
+7. Simply register a new user with postman as postman collection provided, in order to Login.
 8. Rate limiter is 10 perminute, you can change it in `app/Providers/RouteServiceProvider.php` file.
 
 ## Run test:
