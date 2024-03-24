@@ -2,10 +2,11 @@
 
 1. Copy `.env.example` to `.env`.
 2. Fill `.env` variables to match your machine.
-3. Type `php artisan migrate` for database migration.
-4. Find the attached files `postman.json` and `database.sql` in the root directory to upload them into their destination.
-5. Type `php artisan serve` to run the application.
-6. Login to the system with email: `join.doe@gmail.com` and password: `password`.
+3. Find the attached files `postman.json` and `database.sql` in the root directory to upload them into their destination.
+4. Type `php artisan migrate` for database migration incase you didn't upload the database file.
+5. Type `composer install` to install application dependencies.
+6. Type `php artisan serve` to run the application.
+7. Login to the system with email: `join.doe@gmail.com` and password: `password`.
 
 ## Run test:
 
